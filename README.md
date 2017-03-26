@@ -4,7 +4,7 @@ The `example` folder has a super-simple implementation in the `createModule.js` 
 
 ## Usage
 
-```
+```js
 // counter.js
 
 import createModule from "./createModule";
@@ -19,7 +19,7 @@ export const actions = counter.actions;
 
 ```
 
-```
+```js
 // app.js
 
 import React, { Component } from "react";
@@ -36,7 +36,7 @@ const App = ({ count, dispatch }) => (
 export default connect(state => ({ count: state }))(App);
 ```
 
-```
+```js
 // store.js
 
 import { createStore } from "redux";
