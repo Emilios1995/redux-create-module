@@ -9,7 +9,7 @@ The `example` folder has a super-simple implementation in the `createModule.js` 
 
 import createModule from "./createModule";
 
-const counter = createModule(0, {
+const counter = createModule('counter', 0, {
   increment: (state, action) => state + 1,
   decrement: (state, action) => state - 1
 });
