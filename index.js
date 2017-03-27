@@ -1,19 +1,19 @@
-export default function createModule(name, initial, red) {
+export default function createModule(name, initial, handler) {
   const reducer = (state = initial, action) => {
-    const [module, act] = action.type.split("/");
+    const [module, type] = action.type.split("/");
     if (module === name) {
-      return red[act] ? red[act](state, action) : state;
+      return handler[type] ? handler[type](state, action) : state;
     } else {
-      return red[action.type] ? red[action.type](state, action) : state;
+      return handler[action.type] ? handler[action.type](state, action) : state;
     }
   };
-  const actions = Object.keys(red).reduce(
+  const actions = Object.keys(handler).reduce(
     (acc, key) => ({
       ...acc,
       [key]: (payload = {}) => ({ type: `${name}/${key}`, payload })
     }),
     {}
   );
-  const types = Object.keys(red).map(key => `${name}/${key}`);
+  const types = Object.keys(handler).map(key => `${name}/${key}`);
   return { reducer, actions, types };
 }
