@@ -1,6 +1,8 @@
-A concept for a simpler higher-level Redux library.
+A simpler higher-level Redux library.
 The goal here is to remove the need of manually making some of the boilerplate, such as constants and action creators.
-The `example` folder has a super-simple implementation in the `createModule.js` file
+
+## Installation
+`npm install --save redux-create-module`
 
 ## API
 There's only one function
