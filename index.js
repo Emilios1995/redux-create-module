@@ -8,10 +8,10 @@ export default function createModule(name, initial, handler) {
     }
   };
   const actions = Object.keys(handler).reduce(
-    (acc, key) => ({
-      ...acc,
-      [key]: (payload = {}) => ({ type: `${name}/${key}`, payload })
-    }),
+    (acc, key) =>
+      Object.assign(acc, {
+        [key]: (payload = {}) => ({ type: `${name}/${key}`, payload })
+      }),
     {}
   );
   const types = Object.keys(handler).map(key => `${name}/${key}`);
