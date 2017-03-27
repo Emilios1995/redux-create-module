@@ -24,7 +24,7 @@ const counter = createModule('counter', 0, {
 This function returns an object with three things:
 
 `actions` is an object with action creators. 
-for example: `counter.increment()` will return 
+for example: `counter.actions.increment()` will return 
 `{ type: 'counter/increment', payload: {} }`
 
 `reducer` is regular reducer that you can pass to the redux store or to `combineReducers`
