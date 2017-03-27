@@ -7,6 +7,7 @@ The goal here is to remove the need of manually making some of the boilerplate, 
 ## API
 There's only one function
 ### createModule(name, initalState, reducer) -> {reducer, actions, types}
+
 #### Params
 `name` is just a string that will be included in the action types.
 
