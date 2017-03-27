@@ -10,7 +10,7 @@ export default function createModule(name, initial, red) {
   const actions = Object.keys(red).reduce(
     (acc, key) => ({
       ...acc,
-      [key]: payload => ({ type: `${name}/${key}`, payload })
+      [key]: (payload = {}) => ({ type: `${name}/${key}`, payload })
     }),
     {}
   );
