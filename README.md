@@ -1,5 +1,4 @@
-A simpler higher-level Redux library.
-The goal here is to remove the need of manually making some of the boilerplate, such as constants and action creators.
+This is just a little helper whose is goal is to remove the need of manually making some of the boilerplate, such as constants and action creators.
 
 ## Installation
 `npm install --save redux-create-module`
