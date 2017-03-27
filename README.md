@@ -6,14 +6,14 @@ The goal here is to remove the need of manually making some of the boilerplate, 
 
 ## API
 There's only one function
-### createModule(name, initalState, reducer) -> {reducer, actions, types}
+### createModule(name, initalState, handler) -> {reducer, actions, types}
 
 #### Params
 `name` is just a string that will be included in the action types.
 
 `initialState` is, well, the initial state for the module.
 
-`reducer` is where it gets interesting. It's an object where the keys are action names
+`handler` is where it gets interesting. It's an object where the keys are action names
 and the values are action handlers. For example:
 ```js
 const counter = createModule('counter', 0, {
