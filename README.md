@@ -17,6 +17,7 @@ const counter = createModule('counter', 0, {
 export default counter.reducer;
 export const actions = counter.actions;
 
+// actions.increment() -> {type: 'counter/increment', payload: {}}
 ```
 
 ```js
@@ -32,6 +33,7 @@ const App = ({ count, dispatch }) => (
     <button onClick={() => dispatch(actions.increment())}>Increment</button>
   </div>
 );
+
 
 export default connect(state => ({ count: state }))(App);
 ```
