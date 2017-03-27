@@ -1,4 +1,4 @@
-import createModule from "./createModule";
+import createModule from "redux-create-module";
 
 const counter = createModule("counter", 0, {
   increment: (state, action) => state + 1,

@@ -39,7 +39,6 @@ const timesIncremented = createModule('timesIncremented', 0 {
 
 
 
-m
 ## Basic Usage
 
 ```js

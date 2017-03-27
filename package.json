@@ -1,0 +1,29 @@
+{
+  "name": "redux-create-module",
+  "version": "1.0.0",
+  "description": " a simpler higher-level Redux library Edit",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emilios1995/redux-create-module.git"
+  },
+  "keywords": [
+    "redux",
+    "react",
+    "actions",
+    "flux",
+    "reducers"
+  ],
+  "author": "Emilio Srougo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emilios1995/redux-create-module/issues"
+  },
+  "homepage": "https://github.com/Emilios1995/redux-create-module#readme"
+}
