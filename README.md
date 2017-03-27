@@ -2,7 +2,45 @@ A concept for a simpler higher-level Redux library.
 The goal here is to remove the need of manually making some of the boilerplate, such as constants and action creators.
 The `example` folder has a super-simple implementation in the `createModule.js` file
 
-## Usage
+## API
+There's only one function
+### createModule(name, initalState, reducer) -> {reducer, actions, types}
+#### Params
+`name` is just a string that will be included in the action types.
+
+`initialState` is, well, the initial state for the module.
+
+`reducer` is where it gets interesting. It's an object where the keys are action names
+and the values are action handlers. For example:
+```js
+const counter = createModule('counter', 0, {
+  increment: (state, action) => state + 1,
+  decrement: (state, action) => state - 1
+})
+```
+#### Returns
+This function returns an object with three things:
+
+`actions` is an object with action creators. 
+for example: `counter.increment()` will return 
+`type: 'counter/increment', payload: {}`
+
+`reducer` is regular reducer that you can pass to the redux store or to `combineReducers`
+
+`types` is an object with the generated action types. For example:
+`counter.types.increment` is equal to `counter/increment`
+This is useful to handle an action from another module. for example, if we wanted
+to make another module that tracks how many times the counter was incremented: 
+```js
+const timesIncremented = createModule('timesIncremented', 0 {
+  [counter.types.increment]: (state, action) => state + 1
+})
+```
+
+
+
+m
+## Basic Usage
 
 ```js
 // counter.js
