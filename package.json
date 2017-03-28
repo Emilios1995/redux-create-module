@@ -1,7 +1,7 @@
 {
   "name": "redux-create-module",
-  "version": "1.0.0",
-  "description": " a simpler higher-level Redux library Edit",
+  "version": "1.0.1",
+  "description": "A single function that returns a reducer, action creators, and action types",
   "main": "index.js",
   "directories": {
     "example": "example"
