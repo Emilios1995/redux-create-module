@@ -14,6 +14,6 @@ export default function createModule(name, initial, handler) {
       }),
     {}
   );
-  const types = Object.keys(handler).map(key => `${name}/${key}`);
+  const types = Object.keys(handler).reduce((acc, key) => Object.assign({}, acc, {[key]: `${name}/${key}`}), {});
   return { reducer, actions, types };
 }
