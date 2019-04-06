@@ -7,7 +7,7 @@
     "example": "example"
   },
   "scripts": {
-    "test": "jest ./tests.js"
+    "test": "jest ./index.test.js"
   },
   "repository": {
     "type": "git",
